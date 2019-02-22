@@ -6,6 +6,9 @@ before_install:
   - docker build -t devstbz/dockjango-test-app .
   - docker build -t devstbz/dockjango-nginx-app ./nginx
 
+script:
+  - docker images 
+
 
 after_success:
   - docker build -t devstbz/dockjango-test-app .
