@@ -1,0 +1,26 @@
+{
+	"AWSEBDockerrunVersion": 2,
+	"containerDefinitions": [
+		{
+			"name": "client",
+			"image": "devstbz/dockjango-test-app",
+			"hostname": "client",
+			"essential": false,
+			"memory": 128
+		},
+		{
+			"name": "nginx",
+			"image": "devstbz/dockjango-nginx-app",
+			"hostname": "nginx",
+			"essential": true,
+			"portMappings": [
+				{
+					"hostPort": 80,
+					"containerPort": 80
+				}
+			],
+			"links": ["client"],
+			"memory": 128
+		}
+	]
+}
