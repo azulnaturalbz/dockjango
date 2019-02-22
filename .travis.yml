@@ -4,22 +4,19 @@ services:
 
 before_install:
   - docker build -t devstbz/dockjango-test-app .
-  - docker build -t devstbz/dockjango-nginx-app ./nginx
 
 script:
   - docker images
 
-
 after_success:
   - docker build -t devstbz/dockjango-test-app .
-  - docker build -t devstbz/dockjango-nginx-app ./nginx
 
   # Log into the docker cli
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   - docker push devstbz/dockjango-test-app
-  - docker push devstbz/dockjango-nginx-app
+
 
 
 
@@ -27,7 +24,7 @@ deploy:
   provider: elasticbeanstalk
   region: us-east-2
   app: dockjango-docker
-  env: DockjangoDocker-env
+  env: DockjangoDocker-env-1
   bucket_name: elasticbeanstalk-us-east-2-323216669271
   bucket_path: dockjango-docker
   on:
