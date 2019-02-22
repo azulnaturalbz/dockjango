@@ -25,11 +25,11 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  region: us-east-2
-  app: dockjango-docker
-  env: DockjangoDocker-env-2
-  bucket_name: elasticbeanstalk-us-east-2-323216669271
-  bucket_path: dockjango-docker
+  region: us-west-2
+  app: Django-Docker
+  env: Django-Docker-dev
+  bucket_name: elasticbeanstalk-us-west-2-323216669271
+  bucket_path: Django-Docker
   on:
     branch: master
   access_key_id: $AWS_ACCESS_ID

@@ -25,7 +25,7 @@ SECRET_KEY = '86iro09!3p83^^n!f67@^l4#v&u07o@$-bepus=)&zv2!3#zkz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['client','nginx','DockjangoDocker-env-2.3fpmkiaht2.us-east-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','nginx','client','django-docker-dev.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
