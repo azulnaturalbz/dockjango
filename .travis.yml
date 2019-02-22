@@ -28,7 +28,7 @@ deploy:
   region: us-east-2
   app: Django-docker
   env: DjangoDocker-env
-  bucket_name: elasticbeanstalk-us-west-2-323216669271
+  bucket_name: elasticbeanstalk-us-east-2-323216669271
   bucket_path: Django-docker
   on:
     branch: master
